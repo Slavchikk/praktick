@@ -1,10 +1,10 @@
 package com.example.praktick;
 
-public class ModelSentUser {
+public class SentUser {
     private String email;
     private String password;
 
-    public ModelSentUser(String email, String password) {
+    public SentUser(String email, String password) {
         this.email = email;
         this.password = password;
     }

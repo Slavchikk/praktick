@@ -4,15 +4,145 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/backFull"
+    tools:context=".Main">
+
+
+    <ImageView
+        android:id="@+id/imgMenu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="64dp"
+        android:minWidth="48dp"
+
+        android:minHeight="48dp"
+        android:src="@drawable/poloski"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="goMenu"/>
+
+    <ImageView
+        android:id="@+id/imgLogs"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="56dp"
+
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgMenu"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvImageProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/imgProfils"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+             />
+    </androidx.cardview.widget.CardView>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tbWithBack"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="136dp"
+        android:fontFamily="@font/alegreya"
+        android:text="С возвращением, "
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="28dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tbFill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/alegreya_sans"
+        android:text="Каким ты себя ощущаешь сегодня?"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbWithBack" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recVie"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbFill" />
+
+
+    <ListView
+        android:id="@+id/listFact"
+        android:layout_width="416dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgGoBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recVie"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgGoBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="280dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toStartOf="@id/imgMusic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recVie"
+       />
+
+    <ImageView
+        android:id="@+id/imgMusic"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginTop="32dp"
+        android:src="@drawable/music"
+        app:layout_constraintEnd_toStartOf="@+id/imgProfil"
+        app:layout_constraintStart_toEndOf="@+id/imgGoBack"
+        app:layout_constraintTop_toBottomOf="@+id/listFact"
+        android:onClick="goListen"/>
+
+    <ImageView
+        android:id="@+id/imgProfil"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+
+        android:layout_marginTop="32dp"
+        android:src="@drawable/profil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgMusic"
+        app:layout_constraintTop_toBottomOf="@+id/listFact"
+        android:onClick="goProfil"/>
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
