@@ -75,7 +75,7 @@ public class Login extends AppCompatActivity {
                 }
                 if (response.body() != null) {
                     if (response.body().getToken() != null) {
-                        SharedPreferences sharedPreferences = getSharedPreferences( // Сохранение данных
+                        SharedPreferences sharedPreferences = getSharedPreferences(
                                 "Date", Context.MODE_PRIVATE);
                         sharedPreferences.edit().putString("NickName", "" + response.body().getNickName()).apply();
                         sharedPreferences.edit().putString("Email", "" + emailLogin).apply();
