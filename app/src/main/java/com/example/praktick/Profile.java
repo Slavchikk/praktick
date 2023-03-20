@@ -27,7 +27,7 @@ public class Profile extends AppCompatActivity {
 
     public void goExit(View view)
     {
-        SharedPreferences prefs = getSharedPreferences( // Сохранение данных
+        SharedPreferences prefs = getSharedPreferences(
                 "Date", Context.MODE_PRIVATE);
         prefs.edit().putString("Avatar", "").apply();
         prefs.edit().putString("NickName", "").apply();
